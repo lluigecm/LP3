@@ -1,8 +1,9 @@
 # CET078 Linguagem de Progamação III
 
 
-## Listas de exercicios propostas na classe, resolvidas majoritariamnete em Python e/ou Java.
+### Listas de exercicios
 
- JDK utilizada: Oracle OpenJDK 20.0.2
- Versão Python utilizada: 3.11.4
+* Resolução das listas feita em Java e/ou Python
+
+
   
