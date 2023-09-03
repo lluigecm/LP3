@@ -1,3 +1,7 @@
-# LP3
+# CET078 Linguagem de Progamação III
 
-A couple of exercises from my Progamming Language III class in university.
+Listas de exercicios propostas na classe, resolvidas majoritariamnete em Python e/ou Java.
+
+JDK utilizada: Oracle OpenJDK 20.0.2
+Versão Python utilizada: 3.11.4
+ 
