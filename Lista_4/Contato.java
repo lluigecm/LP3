@@ -4,10 +4,10 @@ public class Contato{
     private String nome, email, telefone, dataNasc;
 
     public void inicializaContato(){
-        this.email = "NONE";
-        this.telefone = "NONE";
-        this.nome = "NONE";
-        this.dataNasc = "00/00/0000";
+        email = "NONE";
+        telefone = "NONE";
+        nome = "NONE";
+        dataNasc = "00/00/0000";
     }
 
     public void setNome(String nome){
@@ -23,17 +23,17 @@ public class Contato{
         this.dataNasc = dataNasc;
     }
 
-    public String getNome(){return this.nome;}
-    public String getEmail(){return this.email;}
-    public String getTel(){return this.telefone;}
-    public String getDataNasc(){return this.dataNasc;}
+    public String getNome(){return nome;}
+    public String getEmail(){return email;}
+    public String getTel(){return telefone;}
+    public String getDataNasc(){return dataNasc;}
 
     public String imprimeContato(){
-        return ("Contatos:\n\tEmail: " + this.email + "\n\tTelefone: " + this.telefone);
+        return ("Contatos:\n\tEmail: " + email + "\n\tTelefone: " + telefone);
     }
 
     public int calcularIdade(){
-        String[] birth = this.dataNasc.split("/");
+        String[] birth = dataNasc.split("/");
         if(birth.length != 3)
             return -1; //verifica se a data é valida(a questao em si não pede um metodo de verificação de data)
 

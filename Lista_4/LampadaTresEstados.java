@@ -1,4 +1,4 @@
-class LampadaTresEstados{
+public class LampadaTresEstados{
     private int percentState;
 
     public void acende(){

@@ -18,21 +18,21 @@ public class Data{
         }
     }
 
-    public  imprimeData(){
-        System.out.println("%02d/%02d/%02d", this.dia, this.mes, this.ano);
+    public void imprimeData(){
+        System.out.println("%02d/%02d/%02d", dia, mes, ano);
     }
 
     public void imprimeDataExtenso(){
-        System.out.println(this.dia + " de " + checkMes(this.mes) + " de " + this.ano);
+        System.out.println(dia + " de " + checkMes(mes) + " de " +ano);
     }
 
     private String checkMes(int mes){
-        if(this.mes != 0){
+        if(mes != 0){
             String[] months = { "janeiro", "fevereiro", "março", "abril", "maio", "junho",
             "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"};
             return months[mes - 1];
         }else{
-            return ("Invalid month!! Use a setter first!!");
+            return ("0");
         }
     }
 

@@ -58,7 +58,7 @@ public class Ponto2D{
     }
 
     public double distancia(Ponto2D rand){
-        return Math.sqrt(Math.pow(rand.x - this.x, 2) + Math.pow(rand.y - this.y, 2));
+        return Math.sqrt(Math.pow(rand.x - x, 2) + Math.pow(rand.y - y, 2));
     }
     
  }
