@@ -1,13 +1,11 @@
-import javax.swing.text.html.StyleSheet;
-
 class LampadaTresEstados{
     private int percentState;
 
     void acende(){
-        this.percentState = 100;
+        percentState = 100;
     }
     void apaga(){
-        this.percentState = 0;
+        percentState = 0;
     }
     void mostraEstado(){
         if(percentState == 100){
@@ -20,7 +18,7 @@ class LampadaTresEstados{
     }
 
     boolean estaLigada(){
-        if(this.percentState == 100)
+        if(percentState == 100)
             return true;
         else  
             return false;
