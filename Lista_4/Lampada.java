@@ -16,7 +16,7 @@ class Lampada{
     }
 
     boolean estaLigada(){
-        if(this.on)
+        if(on)
             return true;
         else
             return false;
