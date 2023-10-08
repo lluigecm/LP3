@@ -1,13 +1,13 @@
-class Lampada{
+public class Lampada{
     private boolean on;
 
-    void acende(){
+    public void acende(){
         on = true;
     }
-    void apaga(){
+    public void apaga(){
         on = false;
     }
-    void mostraEstado(){
+    public void mostraEstado(){
         if(on){
             System.out.println("A lampada esta acesa");
         }else{
@@ -15,8 +15,8 @@ class Lampada{
         }
     }
 
-    boolean estaLigada(){
-        if(on)
+    public boolean estaLigada(){
+        if(this.on)
             return true;
         else
             return false;

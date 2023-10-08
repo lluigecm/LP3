@@ -1,48 +1,48 @@
 import java.lang.Math;
 
-class Ponto2D{
+public class Ponto2D{
     private double x, y;
 
-    void setEixoX(double x){
+    public void setEixoX(double x){
         this.x = x;
     }
 
-    void setEixoY(double y){
+    public void setEixoY(double y){
         this.y = y;
     }
 
-    double getEixoX(){
+    public double getEixoX(){
         return x;
     }
 
-    double getEixoY(){
+    public double getEixoY(){
         return y;
     }
 
-    void imprimirPonto(){
+    public void imprimirPonto(){
         System.out.println("O ponto esta nas coordenadas (" + x + ", " + y + ")");
     }
 
-    boolean isEixoX(){
+    public boolean isEixoX(){
         if(x==0)
             return true;
         else
             return false;
     }
-    boolean isEixoY(){
+    public boolean isEixoY(){
         if(y==0)
             return true;
         else
             return false;
     }
-    boolean isEixos(){
+    public isEixos(){
         if(x == 0 && y ==0)
             return true;
         else
             return false;
     }
 
-    int quadrante(){
+    public int quadrante(){
         if(isEixos())
             return 0;
         else{
@@ -57,8 +57,8 @@ class Ponto2D{
         }
     }
 
-    double distancia(Ponto2D rand){
-        return Math.sqrt(Math.pow(rand.x - x, 2) + Math.pow(rand.y - y, 2));
+    public double distancia(Ponto2D rand){
+        return Math.sqrt(Math.pow(rand.x - this.x, 2) + Math.pow(rand.y - this.y, 2));
     }
     
  }

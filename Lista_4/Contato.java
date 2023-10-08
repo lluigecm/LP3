@@ -1,6 +1,6 @@
 import java.util.Calendar;
 
-class Contato{
+public class Contato{
     private String nome, email, telefone, dataNasc;
 
     public void inicializaContato(){
