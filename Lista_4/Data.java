@@ -37,13 +37,13 @@ public class Data{
     }
 
     public int getDia(){
-        return this.dia;
+        return dia;
     }
     public int getMes(){
-        return this.mes;
+        return mes;
     }
     public int getAno(){
-        return this.ano;
+        return ano;
     }
 
 
