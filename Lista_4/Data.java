@@ -3,8 +3,9 @@ public class Data{
 
 
     public void inicilizarData(){
-        this.dia = 1; this.mes = 1;
-        this.ano = 2000;
+        dia = 1; 
+        mes = 1;
+        ano = 2000;
     }    
 
     public void setData(int dia, int mes, int ano){
