@@ -1,7 +1,22 @@
-import java.util.Calendar;
+import java.util.*;
 
 public class Contato{
     private String nome, email, telefone, dataNasc;
+
+    public static void main(String[] args){
+        Contato cliente = new Contato();
+
+        cliente.setNome("Fabricio");
+        cliente.setDataNasc("01/05/1989");
+        cliente.setEmail("fab_dant@gmail.com");
+        cliente.setTel("73988024718");
+
+        System.out.println("Nome do cliente: " + cliente.getNome());
+        System.out.println("Data de nascimento do clente: " + cliente.getDataNasc());
+        cliente.imprimeContato();
+        System.out.println(cliente.nome + "tem " + cliente.calcularIdade() + " anos de idade");
+
+    }
 
     public void inicializaContato(){
         email = "NONE";
@@ -41,18 +56,18 @@ public class Contato{
         int mesNasc = Integer.parseInt(birth[1]);
         int anoNasc = Integer.parseInt(birth[2]);
 
-        Calendar today = getInstance();
+        Calendar today = Calendar.getInstance();
 
-        int curretYear = dataAtual.get(YEAR);
-        int currentMonth = dataAtual.get(MONTH) + 1; //mes comeca em 0
-        int currentDay = dataAtual.get(DAY_OF_MONTH);
+        int currentYear = today.get(Calendar.YEAR);
+        int currentMonth = today.get(Calendar.MONTH) + 1; //mes comeca em 0
+        int currentDay = today.get(Calendar.DAY_OF_MONTH);
 
-        int idade = curretYear - anoNasc;
+        int idade = currentYear - anoNasc;
 
         if(currentMonth < mesNasc || (currentMonth == mesNasc && currentDay < diaNasc)){
             idade--;
         }
-        
-        return idade;     
+
+        return idade;
     }
 }

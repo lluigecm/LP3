@@ -1,12 +1,25 @@
 public class Data{
     private int dia, mes, ano;
 
+    public static void main(String[] args) {
+        Data date = new Data();
+
+        date.inicilizarData();
+        date.imprimeData();
+        date.imprimeDataExtenso();
+        System.out.println("");
+        date.setData(24, 2, 2018);
+        date.imprimeData();
+        date.imprimeDataExtenso();
+
+        System.out.println("\nData: " + date.getDia() + "/" + date.getMes() + "/" + date.getAno());
+    }
 
     public void inicilizarData(){
-        dia = 1; 
+        dia = 1;
         mes = 1;
         ano = 2000;
-    }    
+    }
 
     public void setData(int dia, int mes, int ano){
         if(validDate(dia, mes, ano)){
@@ -20,7 +33,7 @@ public class Data{
     }
 
     public void imprimeData(){
-        System.out.println("%02d/%02d/%02d", dia, mes, ano);
+        System.out.printf("%02d/%02d/%02d\n", dia, mes, ano);
     }
 
     public void imprimeDataExtenso(){
@@ -30,7 +43,7 @@ public class Data{
     private String checkMes(int mes){
         if(mes != 0){
             String[] months = { "janeiro", "fevereiro", "março", "abril", "maio", "junho",
-            "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"};
+                    "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"};
             return months[mes - 1];
         }else{
             return ("0");

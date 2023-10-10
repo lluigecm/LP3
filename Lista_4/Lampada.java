@@ -1,5 +1,19 @@
 public class Lampada{
-    private boolean on;
+    private boolean on = false;
+
+    public static void main(String[] args) {
+        Lampada light = new Lampada();
+
+        light.mostraEstado();
+        light.acende();
+        light.mostraEstado();;
+        if(light.estaLigada()){
+            System.out.println("Lampada ligada");
+        }else{
+            System.out.println("Lampada apagada");
+        }
+
+    }
 
     public void acende(){
         on = true;
@@ -16,9 +30,6 @@ public class Lampada{
     }
 
     public boolean estaLigada(){
-        if(on)
-            return true;
-        else
-            return false;
+        return on;
     }
 }
