@@ -1,8 +1,14 @@
 class Time:
-    def __init__(self):
-        self.__hora = 00
-        self.__min = 00
-        self.__seg = 00
+    def __init__(self, hora, min, seg):
+        if self.__validTime(hora, min, seg):
+            self.__hora = hora
+            self.__min = min
+            self.__seg = seg
+        else:
+            print("Hora inválida, inicializando com 0")
+            self.__hora = 0
+            self.__min = 0
+            self.__seg = 0
 
     @property
     def hora(self):
@@ -68,22 +74,24 @@ class Time:
         if self.__hora > 23:
             self.__hora = self.__hora % 24
     
+    def __validTime(self, hora, min, seg):
+        return hora >= 0 and hora <= 23 and min >= 0 and min <= 59 and seg >= 0 and seg <= 59
   
 def main():
-    hour = Time();
-    hour.hora = 21
-    hour.min = 28
-    hour.seg = 25
+    hour = Time(21, 28, 25);
+    #hour.hora = 21
+    #hour.min = 28
+    #hour.seg = 25
     print(hour.mostra_hora())
     print(hour.isAm())
 
     hour.add_seconds(43200)
     print(hour.mostra_hora())
 
-    hour2 = Time()
-    hour2.hora = 7
-    hour2.min = 28
-    hour2.seg = 25
+    hour2 = Time(7, 28, 25)
+    #hour2.hora = 7
+    #hour2.min = 28
+    #hour2.seg = 25
 
     print(f"Diferença de {hour.cron(hour2)} segundos entre hour e hour2")
 
