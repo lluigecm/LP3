@@ -1,4 +1,4 @@
-class Time{
+public class Time{
     private int hora, min, seg;
     
     public static void main(String[] args) {
