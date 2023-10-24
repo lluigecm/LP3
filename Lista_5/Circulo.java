@@ -59,8 +59,8 @@ public class Circulo {
         return this.area() > rnd.area();
     }
     public boolean isInnerPoint(Ponto2D rnd){
-        Ponto2D aux = new Ponto2D(x, y);
-        return rnd.distancia(rnd) < raio;
+        Ponto2D aux = new Ponto2D(this.x, this.y);
+        return rnd.distancia(aux) < raio;
     }
     private boolean validaCirculo(float raio){
         return (raio > 0);
