@@ -1,3 +1,4 @@
+package Lista7;
 import java.util.Calendar;
 
 public class Time{
@@ -14,7 +15,7 @@ public class Time{
         System.out.println(Time.isPm(t2));
     }
 
-    Time(int hora, int min, int seg){
+    public Time(int hora, int min, int seg){
         if(validateTima(hora, min, seg)){
             this.hora = hora;
             this.min = min;
@@ -26,19 +27,19 @@ public class Time{
         }
     }
 
-    Time(Time obj){
+    public Time(Time obj){
         this(obj.hora, obj.min, obj.seg);
     }
 
-    Time(int hora){
+    public Time(int hora){
         this(hora,0,0);
     }
 
-    Time(int hora, int min){
+    public Time(int hora, int min){
         this(hora, min, 0);
     }
 
-    Time(){
+    public Time(){
         this(0,0,0);
     }
 
@@ -147,6 +148,10 @@ public class Time{
 
     public static boolean isPm(Time t1){
         return t1.hora > 12;
+    }
+
+    public boolean isEquals(Time obj){
+        return (this.hora == obj.hora && this.min == obj.min && this.seg == obj.seg);
     }
 
 }

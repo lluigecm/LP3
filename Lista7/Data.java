@@ -1,3 +1,5 @@
+package Lista7;
+
 public class Data{
     private int dia, mes, ano;
 
@@ -14,7 +16,7 @@ public class Data{
         System.out.println(Data.dayToPrintShort(date1));
     }
 
-    Data(int dia, int mes, int ano){
+    public Data(int dia, int mes, int ano){
         if(validDate(dia, mes, ano)){
             this.dia = dia;
             this.mes = mes;
@@ -25,10 +27,10 @@ public class Data{
             this.ano = 2000;
         }
     }
-    Data(Data obj){
+    public Data(Data obj){
         this(obj.dia, obj.mes, obj.ano);
     }
-    Data(){
+    public Data(){
         this(1, 1, 1970);
     }
 
@@ -79,6 +81,17 @@ public class Data{
     public String getData(){
         return (this.dia + "/" + this.mes + "/" + this.ano);
     }
+
+    public int getDia(){
+        return dia;
+    }
+    public int getMes(){
+        return mes;
+    }
+    public int getAno(){
+        return ano;
+    }
+
 
     private static boolean leapYear(int a){
         return(a%400==0 || (a%4==0 && !(a%100==0)));
@@ -204,5 +217,9 @@ public class Data{
 
     public static String dayToPrintLong(Data aux){
         return (aux.dia + " de " + aux.checkMes(aux.mes) + " de " + aux.ano);
+    }
+
+    public boolean isEquals(Data obj){
+        return (this.dia == obj.dia && this.mes == obj.mes && this.ano == obj.ano);
     }
 }
