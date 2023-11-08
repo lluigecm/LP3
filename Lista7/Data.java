@@ -60,9 +60,9 @@ public class Data{
         if(validDate(0,primeiroDiaDoMesX,ano))
             setData(1, primeiroDiaDoMesX,ano);
     }
-    public void imprimeData(){
-        System.out.printf("%02d/%02d/%02d\n", dia, mes, ano);
-    }
+    public String imprimeData(){
+        return (dia + "/" + mes + "/" + ano);
+    } 
 
     public void imprimeDataExtenso(){
         System.out.println(dia + " de " + checkMes(mes) + " de " +ano);

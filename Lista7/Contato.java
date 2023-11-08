@@ -4,7 +4,7 @@ public class Contato{
     private String nome, email, telefone, dataNasc;
     static public int inst = 0;
 
-    Contato(String nome, String email, String telefone, String dataNasc){
+    public Contato(String nome, String email, String telefone, String dataNasc){
         if(validaNome(nome))
             this.nome = nome;
         else
@@ -110,8 +110,8 @@ public class Contato{
         return false;
 
     }
-    public void imprimeContato(){
-        System.out.println("Contatos:\n\tEmail: " + email + "\n\tTelefone: " + telefone);
+    public String imprimeContato(){
+        return ("Contatos:\n\tEmail: " + email + "\n\tTelefone: " + telefone);
     }
 
     public int calcularIdade(){
